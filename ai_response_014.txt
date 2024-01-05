@@ -1,0 +1,91 @@
+System Prompt File: system_prompt_014.txt
+User Request: <start of user request> Total ad spend for last 90 days for Facebook, TikTok, Google and Apple Search <end of user request>
+Response Text: To provide the total ad spend for the last 90 days for Facebook, TikTok, Google, and Apple Search, I will select the most recent tables with daily granularity that contain spend data for each of these platforms. The current date is January 5, 2024, so the relevant period for the last 90 days would be from October 7, 2023, to January 5, 2024.
+
+After sorting the tables by the "freshness_date" field and considering the guidelines, here are the most suitable tables:
+
+1) For Facebook:
+- "ads_6937_facebook_all_data" (freshness_date: "2023-03-10") is not suitable because it is not updated for the required period.
+- "ads_creative_6937_facebook_all_data" (freshness_date: "2023-01-02") is not suitable because it is not updated for the required period.
+- "ads_placements_6937_facebook_all_data" (freshness_date: "2023-12-28") is suitable because it is updated and contains spend data.
+- "campaign_6937_facebook_all_data" (freshness_date: "2023-01-02") is not suitable because it is not updated for the required period.
+- "device_by_campaign_6937_facebook_all_data" (freshness_date: "2023-09-21") is not suitable because it is not updated for the required period.
+- "ads_month_reach_6937_facebook_all_data" (freshness_date: "2023-01-02") is not suitable because it is not updated for the required period.
+- "campaign_week_reach_6937_facebook_all_data" (freshness_date: "2023-12-25") is not suitable because it is not updated for the required period and does not contain spend data.
+- "dma_region_by_ads_6937_facebook_all_data" (freshness_date: "2023-12-28") is suitable because it is updated and contains spend data.
+- "entity_campaigns_6937_facebook_all_data" (freshness_date: "1970-01-01") is not suitable because it is not updated for the required period.
+- "custom_conversions_6937_facebook_all_data" (freshness_date: "2023-02-06") is not suitable because it is not updated for the required period.
+
+2) For TikTok:
+- "ads_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is suitable because it is updated and contains spend data.
+- "ads_dma_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is suitable because it is updated and contains spend data.
+- "campaign_lifetime_reach_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is not suitable because it is a lifetime reach table and does not contain spend data.
+- "campaign_month_reach_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is not suitable because it is a month reach table and does not contain spend data.
+- "campaign_week_reach_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is not suitable because it is a week reach table and does not contain spend data.
+
+3) For Google:
+- "campaign_6937_google_ads_ql_all_data" (freshness_date: "2023-12-28") is suitable because it is updated and contains spend data.
+- "ads_6937_google_ads_ql_all_data" (freshness_date: "2023-04-15") is not suitable because it is not updated for the required period.
+- "ads_device_6937_google_ads_ql_all_data" (freshness_date: "2023-12-28") is suitable because it is updated and contains spend data.
+- "ads_device_conversions_6937_google_ads_ql_all_data" (freshness_date: "2023-12-28") is not suitable because it is a conversions table and does not contain spend data.
+
+4) For Apple Search:
+- "ads_6937_apple_search_all_data" (freshness_date: "2023-12-28") is suitable because it is updated and contains spend data.
+- "adsets_device_6937_apple_search_all_data" (freshness_date: "2023-12-28") is suitable because it is updated and contains spend data.
+
+Here is the JSON output with the selected tables:
+
+```json
+{
+  "data": [
+    {
+      "pros": "Contains spend data, updated for the required period",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_placements_6937_facebook_all_data"
+    },
+    {
+      "pros": "Contains spend data, updated for the required period",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "dma_region_by_ads_6937_facebook_all_data"
+    },
+    {
+      "pros": "Contains spend data, updated for the required period",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_6937_tiktok_ads_all_data"
+    },
+    {
+      "pros": "Contains spend data, updated for the required period",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_dma_6937_tiktok_ads_all_data"
+    },
+    {
+      "pros": "Contains spend data, updated for the required period",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "campaign_6937_google_ads_ql_all_data"
+    },
+    {
+      "pros": "Contains spend data, updated for the required period",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_device_6937_google_ads_ql_all_data"
+    },
+    {
+      "pros": "Contains spend data, updated for the required period",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_6937_apple_search_all_data"
+    },
+    {
+      "pros": "Contains spend data, updated for the required period",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "adsets_device_6937_apple_search_all_data"
+    }
+  ]
+}
+```

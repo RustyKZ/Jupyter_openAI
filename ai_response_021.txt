@@ -1,0 +1,36 @@
+System Prompt File: system_prompt_021.txt
+User Request: <start of user request> Total ad spend for last 90 days for Facebook, TikTok, Google and Apple Search <end of user request>
+Response Text: To find the total ad spend for the last 90 days for Facebook, TikTok, Google, and Apple Search, we need to look for tables with daily granularity that include ad spend data and have been updated recently to cover the last 90 days from the current date, which is January 5, 2024. We will prioritize tables with the most recent "freshness_date".
+
+After sorting the tables by "freshness_date", the following tables are suitable for the query:
+
+1) For Facebook:
+- "ads_6937_facebook_all_data" (freshness_date: "2023-03-10") is not suitable because it does not cover the last 90 days.
+- "ads_creative_6937_facebook_all_data" (freshness_date: "2023-01-02") is not suitable for the same reason.
+- "ads_placements_6937_facebook_all_data" (freshness_date: "2023-12-28") is suitable as it has the required "spend" column and covers the last 90 days.
+- "campaign_6937_facebook_all_data" (freshness_date: "2023-01-02") is not suitable for the same reason as the first two.
+- "device_by_campaign_6937_facebook_all_data" (freshness_date: "2023-09-21") is not suitable because it does not cover the last 90 days.
+
+2) For TikTok:
+- "ads_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is suitable as it has the required "cost" column which represents ad spend and covers the last 90 days.
+- "ads_dma_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is also suitable but since we already have a suitable table, we will not select this one to avoid redundancy.
+
+3) For Google:
+- "ads_6937_google_ads_ql_all_data" (freshness_date: "2023-04-15") is not suitable because it does not cover the last 90 days.
+- "campaign_6937_google_ads_ql_all_data" (freshness_date: "2023-12-28") is suitable as it has the required "budget_total_amount" column which can represent ad spend and covers the last 90 days.
+
+4) For Apple Search:
+- "ads_6937_apple_search_all_data" (freshness_date: "2023-12-28") is suitable as it has the required "local_spend_amount" column which represents ad spend and covers the last 90 days.
+
+Here is the JSON output with the selected tables:
+
+```
+{
+"data": [
+ {"pros": "Contains spend data, updated recently", "freshness": "2023-12-28", "score": "9", "table_name": "ads_placements_6937_facebook_all_data"},
+ {"pros": "Contains cost data, updated recently", "freshness": "2023-12-28", "score": "9", "table_name": "ads_6937_tiktok_ads_all_data"},
+ {"pros": "Contains budget data, updated recently", "freshness": "2023-12-28", "score": "9", "table_name": "campaign_6937_google_ads_ql_all_data"},
+ {"pros": "Contains spend data, updated recently", "freshness": "2023-12-28", "score": "9", "table_name": "ads_6937_apple_search_all_data"}
+]
+}
+```

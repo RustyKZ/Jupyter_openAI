@@ -1,0 +1,46 @@
+System Prompt File: system_prompt_018.txt
+User Request: <start of user request> Total ad spend for last 90 days for Facebook, TikTok, Google and Apple Search <end of user request>
+Response Text: To find the total ad spend for the last 90 days for Facebook, TikTok, Google, and Apple Search, we need to look for tables with daily granularity that include ad spend data and have been updated recently to cover the last 90 days from the current date, which is January 5, 2024. The tables should also be from the respective data sources mentioned in the user request.
+
+Let's start by sorting the tables by their "freshness_date" to ensure we are looking at the most recent data first, and then select the tables that match the criteria.
+
+After sorting and analyzing the tables, here are the suitable tables for the request:
+
+1) For Facebook:
+- "ads_6937_facebook_all_data" (contains "spend" column, but the freshness date is "2023-03-10" which is not recent enough)
+- "ads_creative_6937_facebook_all_data" (contains "spend" column, but the freshness date is "2023-01-02" which is not recent enough)
+- "ads_placements_6937_facebook_all_data" (contains "spend" column, and the freshness date is "2023-12-28" which is recent enough)
+- "campaign_6937_facebook_all_data" (contains "spend" column, but the freshness date is "2023-01-02" which is not recent enough)
+- "device_by_campaign_6937_facebook_all_data" (contains "spend" column, but the freshness date is "2023-09-21" which is not recent enough)
+
+2) For TikTok:
+- "ads_6937_tiktok_ads_all_data" (contains "cost" column, and the freshness date is "2023-12-28" which is recent enough)
+- "ads_dma_6937_tiktok_ads_all_data" (contains "cost" column, and the freshness date is "2023-12-28" which is recent enough)
+
+3) For Google:
+- "ads_6937_google_ads_ql_all_data" (contains no direct spend column, but the freshness date is "2023-04-15" which is not recent enough)
+- "campaign_6937_google_ads_ql_all_data" (contains "budget_total_amount" and "budget_amount" columns, and the freshness date is "2023-12-28" which is recent enough)
+
+4) For Apple Search:
+- "ads_6937_apple_search_all_data" (contains "local_spend_amount" column, and the freshness date is "2023-12-28" which is recent enough)
+- "adsets_device_6937_apple_search_all_data" (contains "spend" column, and the freshness date is "2023-12-28" which is recent enough)
+
+Now, let's select the most suitable table for each platform considering the presence of the spend column and the most recent data:
+
+- For Facebook: "ads_placements_6937_facebook_all_data"
+- For TikTok: "ads_6937_tiktok_ads_all_data" (choosing this over "ads_dma_6937_tiktok_ads_all_data" because it's not limited to DMA data)
+- For Google: "campaign_6937_google_ads_ql_all_data"
+- For Apple Search: "ads_6937_apple_search_all_data" (choosing this over "adsets_device_6937_apple_search_all_data" because it's not limited to adsets device data)
+
+Here is the JSON output with the selected tables:
+
+```
+{
+"data": [
+ {"pros": "Contains spend data, recent and relevant", "freshness": "2023-12-28", "score": "9", "table_name": "ads_placements_6937_facebook_all_data"},
+ {"pros": "Contains cost data, recent and relevant", "freshness": "2023-12-28", "score": "9", "table_name": "ads_6937_tiktok_ads_all_data"},
+ {"pros": "Contains budget data, recent and relevant", "freshness": "2023-12-28", "score": "9", "table_name": "campaign_6937_google_ads_ql_all_data"},
+ {"pros": "Contains spend data, recent and relevant", "freshness": "2023-12-28", "score": "9", "table_name": "ads_6937_apple_search_all_data"}
+]
+}
+```

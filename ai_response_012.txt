@@ -1,0 +1,294 @@
+System Prompt File: system_prompt_012.txt
+User Request: <start of user request> Count how many times the JSON object (data source) contains the string value 'table_name' <end of user request>
+Response Text: ```json
+[
+  {
+    "table_name": "ads_6937_apple_search_all_data"
+  },
+  {
+    "table_name": "ads_6937_facebook_all_data"
+  },
+  {
+    "table_name": "ads_6937_tiktok_ads_all_data"
+  },
+  {
+    "table_name": "ads_creative_6937_facebook_all_data"
+  },
+  {
+    "table_name": "ads_dma_6937_tiktok_ads_all_data"
+  },
+  {
+    "table_name": "ads_placements_6937_facebook_all_data"
+  },
+  {
+    "table_name": "adsets_device_6937_apple_search_all_data"
+  },
+  {
+    "table_name": "campaign_6937_facebook_all_data"
+  },
+  {
+    "table_name": "campaign_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "campaign_lifetime_reach_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "campaign_lifetime_reach_6937_tiktok_ads_all_data"
+  },
+  {
+    "table_name": "campaign_month_reach_6937_facebook_all_data"
+  },
+  {
+    "table_name": "campaign_month_reach_6937_tiktok_ads_all_data"
+  },
+  {
+    "table_name": "campaign_week_reach_6937_tiktok_ads_all_data"
+  },
+  {
+    "table_name": "device_by_campaign_6937_facebook_all_data"
+  },
+  {
+    "table_name": "extraction_logs"
+  },
+  {
+    "table_name": "mcdm_datasources"
+  },
+  {
+    "table_name": "mrt_ai_assistant_meta_columns"
+  },
+  {
+    "table_name": "mrt_ai_assistant_meta_tables"
+  },
+  {
+    "table_name": "report_accounts"
+  },
+  {
+    "table_name": "rows_stats_6937_improvado"
+  },
+  {
+    "table_name": "stg_data_dictionary"
+  },
+  {
+    "table_name": "stg_extraction_logs"
+  },
+  {
+    "table_name": "stg_fields_description"
+  },
+  {
+    "table_name": "stg_report_types"
+  },
+  {
+    "table_name": "tables_meta_6937"
+  },
+  {
+    "table_name": "ad_group_ad_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "adgroup_performance_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "adgroups_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "ads_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "ads_6937_snapchat_all_data"
+  },
+  {
+    "table_name": "ads_by_devicetype_6937_bing_all_data"
+  },
+  {
+    "table_name": "ads_device_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "ads_device_conversions_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "ads_month_reach_6937_facebook_all_data"
+  },
+  {
+    "table_name": "ads_with_description_goal_6937_bing_all_data"
+  },
+  {
+    "table_name": "ai_weekly_insights_ai"
+  },
+  {
+    "table_name": "basic_performance_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "browsers_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "campaign_category_6937_criteo_all_data"
+  },
+  {
+    "table_name": "campaign_week_reach_6937_facebook_all_data"
+  },
+  {
+    "table_name": "campaigns_by_hour_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "cardlytics_adstock_a6937_6937_sftp_all_data"
+  },
+  {
+    "table_name": "cardlytics_mmm_a6937_6937_sftp_all_data"
+  },
+  {
+    "table_name": "commissions_6937_partnerize_all_data"
+  },
+  {
+    "table_name": "commissions_entity_6937_partnerize_all_data"
+  },
+  {
+    "table_name": "conversion_item_6937_partnerize_all_data"
+  },
+  {
+    "table_name": "conversion_pixel_names_custom_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "conversion_types_6937_ispot_all_data"
+  },
+  {
+    "table_name": "conversions_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "costs_custom_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "country_region_mapping"
+  },
+  {
+    "table_name": "cs_creative_wear_6937_ispot_all_data"
+  },
+  {
+    "table_name": "cs_demographic_view_6937_ispot_all_data"
+  },
+  {
+    "table_name": "cs_household_view_6937_ispot_all_data"
+  },
+  {
+    "table_name": "cs_national_conversions_6937_ispot_all_data"
+  },
+  {
+    "table_name": "cs_web_visit_conversions_6937_ispot_all_data"
+  },
+  {
+    "table_name": "custom_conversions_6937_facebook_all_data"
+  },
+  {
+    "table_name": "dim_meta_columns"
+  },
+  {
+    "table_name": "dim_table_description"
+  },
+  {
+    "table_name": "dim_table_freshness"
+  },
+  {
+    "table_name": "dma_region_by_ads_6937_facebook_all_data"
+  },
+  {
+    "table_name": "dma_region_custom_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "entity_advertisers_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "entity_campaigns_6937_facebook_all_data"
+  },
+  {
+    "table_name": "entity_campaigns_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "entity_creatives_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "geo_adgroups_city_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "geo_campaign_metro_6937_google_ads_ql_all_data"
+  },
+  {
+    "table_name": "geo_campaigns_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "geo_metroarea_6937_bing_all_data"
+  },
+  {
+    "table_name": "impressions_dma_6937_ispot_all_data"
+  },
+  {
+    "table_name": "int_columns_value_range"
+  },
+  {
+    "table_name": "int_meta_columns_incremental"
+  },
+  {
+    "table_name": "line_items_6937_twitter_all_data"
+  },
+  {
+    "table_name": "line_items_device_6937_twitter_all_data"
+  },
+  {
+    "table_name": "mcdm_mapping_fields"
+  },
+  {
+    "table_name": "mcdm_mapping_report_types"
+  },
+  {
+    "table_name": "mcdm_structure"
+  },
+  {
+    "table_name": "mcdm_tables"
+  },
+  {
+    "table_name": "page_analytics_full_6937_gsc_all_data"
+  },
+  {
+    "table_name": "partner_clicks_6937_partnerize_all_data"
+  },
+  {
+    "table_name": "partner_conversions_6937_partnerize_all_data"
+  },
+  {
+    "table_name": "partner_impressions_6937_partnerize_all_data"
+  },
+  {
+    "table_name": "publisher_campaign_creative_6937_ispot_all_data"
+  },
+  {
+    "table_name": "publisher_lift_6937_ispot_all_data"
+  },
+  {
+    "table_name": "sites_6937_ttd_api_all_data"
+  },
+  {
+    "table_name": "skip_columns_6937"
+  },
+  {
+    "table_name": "stg_account_name_mapping"
+  },
+  {
+    "table_name": "stg_customer_system_columns"
+  },
+  {
+    "table_name": "stg_customer_system_tables"
+  },
+  {
+    "table_name": "stg_mcdm_column_description"
+  },
+  {
+    "table_name": "stg_mcdm_mapping_fields"
+  },
+  {
+    "table_name": "stg_report_accounts"
+  },
+  {
+    "table_name": "stg_rows_stats"
+  },
+  {
+    "table_name": "stg_tables_freshness_6937"
+  }
+]
+```

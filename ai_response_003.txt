@@ -1,0 +1,12 @@
+System Prompt File: system_prompt_003.txt
+User Request: Find oldest tables for Apple, Google, Facebook and TikTok
+Response Text: ```json
+{
+"data": [
+ {"pros": "Contains Apple Search Ads data", "freshness": "1970-01-01", "score": "10", "table_name": "entity_campaigns_6937_facebook_all_data"},
+ {"pros": "Contains Google Ads data", "freshness": "1970-01-01", "score": "10", "table_name": "entity_campaigns_6937_facebook_all_data"},
+ {"pros": "Contains Facebook Ads data", "freshness": "1970-01-01", "score": "10", "table_name": "entity_campaigns_6937_facebook_all_data"},
+ {"pros": "Contains TikTok Ads data", "freshness": "2023-02-06", "score": "10", "table_name": "commissions_6937_partnerize_all_data"}
+]
+}
+```

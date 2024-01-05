@@ -1,0 +1,60 @@
+System Prompt File: system_prompt_022.txt
+User Request: <start of user request> Total ad spend for last 90 days for Facebook, TikTok, Google and Apple Search <end of user request>
+Response Text: To find the total ad spend for the last 90 days for Facebook, TikTok, Google, and Apple Search, I will select the most recent tables with daily granularity that contain ad spend data for each of these platforms. The tables must have been updated recently enough to include data for the last 90 days from the current date, which is January 5, 2024. I will sort the tables by their "freshness_date" and select the most suitable ones.
+
+<start of processing request>
+
+After sorting the tables by freshness date and considering the user's request for total ad spend for the last 90 days for Facebook, TikTok, Google, and Apple Search, the following tables are selected:
+
+1) For Facebook:
+- "ads_6937_facebook_all_data" (freshness_date: "2023-03-10") is not suitable because it does not cover the last 90 days.
+- "ads_creative_6937_facebook_all_data" (freshness_date: "2023-01-02") is not suitable for the same reason.
+- "ads_placements_6937_facebook_all_data" (freshness_date: "2023-12-28") is suitable as it is the most recent and covers the required date range.
+- "campaign_6937_facebook_all_data" (freshness_date: "2023-01-02") is not suitable for the same reason as above.
+- "device_by_campaign_6937_facebook_all_data" (freshness_date: "2023-09-21") is not suitable because it does not cover the last 90 days.
+
+2) For TikTok:
+- "ads_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is suitable as it is the most recent and covers the required date range.
+- "ads_dma_6937_tiktok_ads_all_data" (freshness_date: "2023-12-28") is also suitable, but since we need only one table per platform, we will choose the one with the higher granularity or more relevant columns.
+
+3) For Google:
+- "campaign_6937_google_ads_ql_all_data" (freshness_date: "2023-12-28") is suitable as it is the most recent and covers the required date range.
+- "ads_6937_google_ads_ql_all_data" (freshness_date: "2023-04-15") is not suitable because it does not cover the last 90 days.
+
+4) For Apple Search:
+- "ads_6937_apple_search_all_data" (freshness_date: "2023-12-28") is suitable as it is the most recent and covers the required date range.
+
+<end of processing request>
+
+Based on the analysis, here are the selected tables:
+
+```json
+{
+  "data": [
+    {
+      "pros": "Most recent Facebook data, includes spend",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_placements_6937_facebook_all_data"
+    },
+    {
+      "pros": "Most recent TikTok data, includes spend",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_6937_tiktok_ads_all_data"
+    },
+    {
+      "pros": "Most recent Google data, includes spend",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "campaign_6937_google_ads_ql_all_data"
+    },
+    {
+      "pros": "Most recent Apple Search data, includes spend",
+      "freshness": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_6937_apple_search_all_data"
+    }
+  ]
+}
+```

@@ -1,0 +1,32 @@
+System Prompt File: system_prompt_026.txt
+User Request: <start of user request> Total ad spend for last 90 days for Facebook, TikTok, Google and Apple Search <end of user request>
+Response Text: ```json
+{
+  "data": [
+    {
+      "pros": "Most recent Facebook data, includes spend",
+      "freshness_date": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_placements_6937_facebook_all_data"
+    },
+    {
+      "pros": "Most recent TikTok data, includes spend",
+      "freshness_date": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_6937_tiktok_ads_all_data"
+    },
+    {
+      "pros": "Most recent Google data, includes spend",
+      "freshness_date": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_6937_google_ads_ql_all_data"
+    },
+    {
+      "pros": "Most recent Apple Search data, includes spend",
+      "freshness_date": "2023-12-28",
+      "score": "9",
+      "table_name": "ads_6937_apple_search_all_data"
+    }
+  ]
+}
+```

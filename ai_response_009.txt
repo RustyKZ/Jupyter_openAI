@@ -1,0 +1,3 @@
+System Prompt File: system_prompt_009.txt
+User Request: <start of user request> How many tables are contained in the system prompt, excluding nested tables? <end of user request>
+Response Text: 99
