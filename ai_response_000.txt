@@ -1,0 +1,12 @@
+System Prompt File: system_prompt_000.txt
+User Request: Total ad spend for last 90 days for Facebook, TikTok, Google and Apple Search
+Response Text: ```json
+{
+"data": [
+ {"pros": "contains spend data, fresh", "freshness": "2023-12-28", "score": "9", "table_name": "ads_6937_apple_search_all_data"},
+ {"pros": "contains spend data, fresh", "freshness": "2023-12-28", "score": "9", "table_name": "ads_6937_tiktok_ads_all_data"},
+ {"pros": "contains spend data, fresh", "freshness": "2023-12-28", "score": "9", "table_name": "ads_6937_google_ads_ql_all_data"},
+ {"pros": "contains spend data, not fresh but most recent for Facebook", "freshness": "2023-03-10", "score": "6", "table_name": "ads_6937_facebook_all_data"}
+]
+}
+```
